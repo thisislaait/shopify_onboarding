@@ -13,7 +13,8 @@ You are to create a fully responsive experience for users on these device types:
 - Desktops (Google Chrome Browser Only)
 To complete this challenge, assume you are a software engineer at Shopify, assigned to complete this project, so as to provide a great dashboard experience to Shopify merchants.
 
-##Challenge constraints
+## Challenge constraints
+
 Please consider the following constraints as you create your solution to the challenge:
 
 - You may only use 3 HTML, CSS and Vanilla Javascript for the challenge. No CSS or Javascript frameworks or libraries are allowed.
