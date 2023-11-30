@@ -1,6 +1,7 @@
 # shopify_onboarding
 
-##Your Challenge
+## Your Challenge
+
 Your challenge is to build the merchant onboarding experience as per the Figma design we'll provide to you. You are to cater for the three most popular types of Shopify merchants:
 
 - Mouse users
@@ -21,7 +22,8 @@ Please consider the following constraints as you create your solution to the cha
 - Please follow the strict submission guidelines to enable us evaluate your submission. We will make the instructions as clear as possible, and inform you of any errors, but please be sure to follow the instructions.
 - Please make sure every text you use is exactly as displayed on the Figma design. Please do not use different text because the text will be used for your automatic submission evaluation.
 
-##User stories
+## User stories
+
 This is a list of acceptance criteria to consider your solution to this challenge as complete. Please take a moment to study the Figma designs before reading this, so it makes sense as you read.
 
 - As a merchant, when I click on the Shopify icon on the top bar, I am taken to the shopify landing page shopify.com
