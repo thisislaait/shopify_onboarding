@@ -1,4 +1,4 @@
-# shopify_onboarding
+# Shopify Onboarding Dashboard Hackathon
 
 ## Your Challenge
 
