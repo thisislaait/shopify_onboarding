@@ -496,34 +496,3 @@ input::-webkit-search-cancel-button {
     align-items: center;
   }
 }
-
-
-/* xxs 
-@media (max-width: 420px) {
-
-  body {
-    max-width:420px;
-  }
-
-  header {
-    width: 420px;
-    align-items: flex-end;
-    gap: 8px;
-    flex: 1 0 0;
-  }
-
-  .search_bar {
-    display: flex;
-    width: 282px;
-    align-items: center;
-    gap: 8px;
-    padding: 8px;
-    flex: 1 0 0;
-  }
-
-  .onboarding_wrapper {
-    width: 438px;
-    display: flex;
-    align-items: center;
-  }
-}*/

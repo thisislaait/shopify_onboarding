@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
         searchIcon.style.backgroundColor = '';
         searchIcon.style.borderRadius = '';
         searchIcon.style.padding = '';
+        searchIcon.style.filter = '';
       }
 
       searchForm.style.border = searchBar.value.trim() !== '' ? '2px solid #FFF' : '';

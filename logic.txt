@@ -3,7 +3,8 @@
       - Set background color to green.
       - Apply a border-radius of 8px.
       - Add 2px padding to the search bar.
-   b. If false, remove the search icon background.
+      - invert icon color by 100%
+   b. If false, remove the search icon background and restore search icon to original color.
 
 2. Toggle visibility of the rotating circle when the search icon is clicked.
    a. Create a loading animation for the rotating circle:
@@ -20,3 +21,13 @@
       - If the icon is pressed, modify its appearance to indicate the press state.
    b. Return to the original state when released:
       - If the icon is released, return the button to its original appearance.
+
+
+1. Check if there is text in the search bar.
+     a. If true, style the search bar:
+        searchIcon.style.backgroundColor = '#7a0027';
+        searchIcon.style.filter = 'invert(100%)';
+      b. If false, remove the search icon background.
+        searchIcon.style.backgroundColor = '';
+        searchIcon.style.borderRadius = '';
+        searchIcon.style.padding = '';
