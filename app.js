@@ -21,32 +21,36 @@ document.addEventListener('DOMContentLoaded', function() {
       searchForm.style.border = searchBar.value.trim() !== '' ? '2px solid #FFF' : '';
     });
 
+
+    function setupToggle(iconElement, messageElement, backgroundColor, boxShadowColor) {
+      iconElement.addEventListener('click', function () {
+        // 1. Check if the element is hidden
+        const isHidden = messageElement.classList.toggle('hidden');
+    
+        // a. If true, style element:
+        if (!isHidden) {
+          iconElement.style.backgroundColor = backgroundColor;
+          iconElement.style.boxShadow = `0px 0px 0px 3px ${boxShadowColor}, 0px 0px 0px 1px #000`;
+        } else {
+          // b. If false, remove styles.
+          iconElement.style.backgroundColor = '';
+          iconElement.style.boxShadow = '';
+        }
+      });
+    }
+    
+    // Usage example for alert
+    const alertIcon = document.getElementById('accountAlert');
+    const alertMessage = document.getElementById('alertDropdown');
+    setupToggle(alertIcon, alertMessage, '#656266', '#005BD3');
+    
+    // Usage example for profile
+    const profileIcon = document.getElementById('profileContainer');
+    const profileDropdown = document.getElementById('profileDropdownMenu');
+    setupToggle(profileIcon, profileDropdown, '#656266', '#005BD3');
+    
+
+
+    
 })
 
-/*document.addEventListener('DOMContentLoaded', function() {
-    const searchBar = document.getElementById('searchInput');
-    const searchIcon = document.getElementById('searchIcon');
-    const arrowButton = document.getElementById('arrowButton');
-    const searchArrow = document.getElementById('searchArrow');
-  
-    searchBar.addEventListener('input', function() {
-      if (searchBar.value.trim() !== '') {
-        searchIcon.classList.add('hidden');
-        arrowButton.idList.remove('hidden');
-        searchArrow.classList.remove('hidden');
-      } else {
-        searchIcon.classList.remove('hidden');
-        arrowButton.idList.add('hidden');
-        searchArrow.classList.add('hidden');
-      }
-    });
-  
-    arrowButton.addEventListener('mousedown', function() {
-      arrowButton.style.transform = 'scale(0.95)';
-    });
-  
-    arrowButton.addEventListener('mouseup', function() {
-      arrowButton.style.transform = 'scale(1)';
-    });
-  });*/
-  

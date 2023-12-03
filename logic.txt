@@ -31,3 +31,36 @@
         searchIcon.style.backgroundColor = '';
         searchIcon.style.borderRadius = '';
         searchIcon.style.padding = '';
+
+
+// TOGGLE functionality
+
+
+1. Account Alert Toggle:
+
+   When account_alert is clicked:
+      a. Set the account_alert background color to #656266.
+      b. Apply focus styles: Set the background to #656266, and add a box shadow of 0px 0px 0px 3px #005BD3, 0px 0px 0px 1px #000.
+      c. Display the alert_dropdown.
+
+2.Profile Toggle:
+
+   When profile_container is clicked:
+      a. Set the profile_container background color to #656266.
+      b. Apply focus styles: Set the background to #656266, and add a box shadow of 0px 0px 0px 3px #005BD3, 0px 0px 0px 1px #000.
+      c. Display the profile_nav_container.
+
+3. Onboarding Toggle:
+
+   When onboarding_arrow is clicked:
+      a. Rotate the arrow 180 degrees.
+      b. Set the onboarding_arrow_container background color to #656266.
+      c. Apply focus styles: Set the background to #656266, and add a box shadow of 0px 0px 0px 3px #005BD3, 0px 0px 0px 1px #000.
+      d. Display the accordion list.
+
+4. Accordion Toggle (for each item in the accordion):
+
+   When an accordion item ({item.title}) is clicked:
+      a. Display the accordion children - {item.action}, {item.route}, and {item.image}.
+      b. Set the accordion_container background color to #656266 on show.
+      c. Apply focus styles: Set the background to #656266, and add a box shadow of 0px 0px 0px 3px #005BD3, 0px 0px 0px 1px #000.

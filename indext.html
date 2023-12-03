@@ -47,7 +47,7 @@
                 </label>
             </form>
             <div class="user_account">
-                <div class="account_alerts">
+                <div class="account_alerts" id="accountAlert">
                     <svg xmlns="http://www.w3.org/2000/svg" 
                     width="20" height="20" 
                     viewBox="0 0 20 20" 
@@ -84,7 +84,19 @@
                         />
                     </svg>
                 </div>
-                <div class="profile_container">
+                <div class="hidden dropdown" id="alertDropdown" aria-label="Alerts Dropdown">
+                    <div class="alert_nav">
+                        <p class="inter-14">Alerts</p>
+                        <div class=" alert_icons ">
+                            <img src="https://crushingit.tech/hackathon-assets/icon-filter.svg" alt="Filter Icon" style="filter: invert(100%);" aria-hidden="true">
+                            <img src="https://crushingit.tech/hackathon-assets/icon-check-empty-circle.svg" alt="Check Circle Icon" style="filter: invert(100%);" aria-hidden="true">
+                        </div>
+                    </div>
+                    <div class="alert_message inter-13e">
+                        <p>Alerts about your store and account will show here</p>
+                    </div>
+                </div>
+                <div class="profile_container" id="profileContainer">
                     <div class="profile_business_name inter-12c">
                         Davii Collection
                     </div>
@@ -93,9 +105,128 @@
                         DC
                     </div>
                 </div>
+                <!-- Dropdown menus -->
+                <div class="hidden profile_nav_container" id="profileDropdownMenu" aria-hidden="true">
+                    <!-- Menu items here -->
+                    <div class="profile_nav">
+                        <div class="profile_details">
+                            <div class="profile_placeholder inter-10" role="img" aria-label="Profile Image">
+                                DC
+                            </div>
+                            <div class="profile_business_name inter-13c" role="heading" aria-level="2" id="profileName">
+                                Davii Collection
+                            </div>
+                        </div>
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M13.3332 4L5.99984 11.3333L2.6665 8" stroke="#303030" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="profile_stores">
+                        <div class="store_icon">  
+                            <img src="https://crushingit.tech/hackathon-assets/icon-store.svg" alt="" srcset="" class="">
+                        </div>
+                        <div class=" stores inter-13b">
+                            All stores
+                        </div>
+                    
+                    </div>
+                
+                    <ul class="profile_nav_wrapper">
+                        <a href="https://admin.shopify.com/">
+                        <li class="profile_nav_list inter-13b">
+                            Help Center
+                        </li>
+                        </a>
+                        
+                        <a href="https://admin.shopify.com/">
+                        <li class="profile_nav_list inter-13b">
+                            Changelog
+                        </li>
+                        </a>
+
+                        <a href="https://admin.shopify.com/">
+                        <li class="profile_nav_list inter-13b">
+                            Community forums
+                        </li>
+                        </a>
+                        
+                        <a href="https://admin.shopify.com/">
+                        <li class="profile_nav_list inter-13b">
+                            Hire a Shopify Partner
+                        </li>
+                        </a>
+                        
+                        <a href="https://admin.shopify.com/">
+                        <li class="profile_nav_list inter-13b">
+                            Keyboard shortcuts
+                        </li>
+                        </a>
+                        
+                    </ul>
+                    
+                    <div class="profile_account">
+                        <p class="profile_details_name inter-13a">David Micheal</p>
+                        <p class="profile_details_email inter-12a">davidmicheal@gmail.com</p>
+                    </div>
+                    
+                    <ul class="profile_nav_wrapper">
+                        <a href="https://admin.shopify.com/">
+                        <li class="profile_nav_list inter-13b">
+                            Manage account
+                        </li>
+                        </a>
+                        
+                        <a href="https://admin.shopify.com/">
+                        <li class="profile_nav_list inter-13b">
+                            Log out
+                        </li>
+                        </a>
+                    </ul>
+                </div>
             </div>
         </nav>
     </header>
+
+    <main class="onboarding_wrapper">
+        <section class="onboarding_banner_desktop">
+            <div class="inter-13d">
+                Extend your trial for $1/month for 3 months on select plans.
+            </div>
+            <div class="plan_prompt_container">
+                <button class="plan_btn inter-12b">
+                    Select a plan
+                </button>
+                <div class="close_icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M13.9697 15.0303C14.2626 15.3232 14.7374 15.3232 15.0303 15.0303C15.3232 14.7374 15.3232 14.2626 15.0303 13.9697L11.0607 10L15.0303 6.03033C15.3232 5.73744 15.3232 5.26256 15.0303 4.96967C14.7374 4.67678 14.2626 4.67678 13.9697 4.96967L10 8.93934L6.03033 4.96967C5.73744 4.67678 5.26256 4.67678 4.96967 4.96967C4.67678 5.26256 4.67678 5.73744 4.96967 6.03033L8.93934 10L4.96967 13.9697C4.67678 14.2626 4.67678 14.7374 4.96967 15.0303C5.26256 15.3232 5.73744 15.3232 6.03033 15.0303L10 11.0607L13.9697 15.0303Z" fill="#E3E3E3"/>
+                      </svg> 
+                </div>
+            </div>
+        </section>
+        <section class="onboarding_banner_mobile">
+            <div class="trial_banner_message">
+                <div class="inter-13d">
+                    Extend your trial for $1/month for 3 months on select plans.
+                </div>
+                <div class="close_icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M13.9697 15.0303C14.2626 15.3232 14.7374 15.3232 15.0303 15.0303C15.3232 14.7374 15.3232 14.2626 15.0303 13.9697L11.0607 10L15.0303 6.03033C15.3232 5.73744 15.3232 5.26256 15.0303 4.96967C14.7374 4.67678 14.2626 4.67678 13.9697 4.96967L10 8.93934L6.03033 4.96967C5.73744 4.67678 5.26256 4.67678 4.96967 4.96967C4.67678 5.26256 4.67678 5.73744 4.96967 6.03033L8.93934 10L4.96967 13.9697C4.67678 14.2626 4.67678 14.7374 4.96967 15.0303C5.26256 15.3232 5.73744 15.3232 6.03033 15.0303L10 11.0607L13.9697 15.0303Z" fill="#E3E3E3"/>
+                    </svg> 
+                </div>
+            </div>
+            <div class="plan_container_mobile">
+                <button class="plan_btn inter-12b">
+                    Select a plan
+                </button>
+            </div>
+        </section>
+        <section class="onboarding_steps">
+
+        </section>
+    </main>
 
 
     <script src="app.js"></script>
