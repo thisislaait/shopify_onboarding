@@ -36,31 +36,81 @@
 // TOGGLE functionality
 
 
-1. Account Alert Toggle:
+Logic Breakdown:
 
-   When account_alert is clicked:
-      a. Set the account_alert background color to #656266.
-      b. Apply focus styles: Set the background to #656266, and add a box shadow of 0px 0px 0px 3px #005BD3, 0px 0px 0px 1px #000.
-      c. Display the alert_dropdown.
+1. **Get DOM Elements**:
+   - Obtain references to HTML elements using `getElementById` for:
+     - `alertIcon`
+     - `alertMessage`
+     - `profileContainer`
+     - `profileDropdownMenu`
 
-2.Profile Toggle:
+2. **Add Event Listener**:
+   - Attach a click event listener to the `alertIcon` element to detect when it's clicked.
 
-   When profile_container is clicked:
-      a. Set the profile_container background color to #656266.
-      b. Apply focus styles: Set the background to #656266, and add a box shadow of 0px 0px 0px 3px #005BD3, 0px 0px 0px 1px #000.
-      c. Display the profile_nav_container.
+3. **Toggle Visibility**:
+   - Use `classList.toggle` to toggle the 'hidden' class on the `alertMessage` element.
+   - Check if the element was hidden or visible before the toggle.
+
+4. **Styling Logic**:
+   - If the element is visible (`!isHidden`):
+     - Set the background color of `alertIcon` to a specific shade of red (`#7a0027`).
+     - Apply a box shadow for emphasis.
+   - If the element is hidden (`isHidden`):
+     - Reset the background color of `alertIcon` to its default state.
+     - Remove the box shadow.
+
 
 3. Onboarding Toggle:
 
-   When onboarding_arrow is clicked:
-      a. Rotate the arrow 180 degrees.
-      b. Set the onboarding_arrow_container background color to #656266.
-      c. Apply focus styles: Set the background to #656266, and add a box shadow of 0px 0px 0px 3px #005BD3, 0px 0px 0px 1px #000.
-      d. Display the accordion list.
+1. Toggle Entire Onboarding Steps:
+   a. Clicking the toggleArrow initiates the toggle functionality.
+   b. by default, the first accordion container is open.
+      - Clicking the toggleArrow hides all accordion containers.
+   c. If the accordion containers are closed:
+      - Clicking the toggleArrow removes hidden on accordion containers.
+   d. This behavior alternates between closing and showing the accordion containers with each click.
 
-4. Accordion Toggle (for each item in the accordion):
+2. On toggleArrow Click:
+   a. rotate toggleArrow 180 degrees when accordion is open
+   b. Apply focus styles:
+      - Add a box shadow of 0px 0px 0px 3px #005BD3, 0px 0px 0px 1px #000.
 
-   When an accordion item ({item.title}) is clicked:
-      a. Display the accordion children - {item.action}, {item.route}, and {item.image}.
-      b. Set the accordion_container background color to #656266 on show.
-      c. Apply focus styles: Set the background to #656266, and add a box shadow of 0px 0px 0px 3px #005BD3, 0px 0px 0px 1px #000.
+
+4. Function to Show Only Task1 Action:
+
+a. On page load:
+- Set hidden attribute to false for the first accordion with task1 class (task1 accordion).
+- Set hidden attribute to true for all other accordions.
+
+Styling Logic:
+
+b. For each accordion item:
+If accordion_task_action is visible (no hidden class):
+- Set background color of accordion_container to #f3f3f3.
+- Set font weight of item.title to 700.
+
+c. If accordion_task_action is hidden:
+Reset background color of accordion_container.
+Reset font weight of item.title.
+
+1. Function for Toggling Accordion Action on Click:
+
+   Initialization:
+   - On page load:
+     - Attach a click event listener to each element with the class accordion_task.
+
+   Toggle Functionality:
+   - When an accordion_task is clicked:
+     - Toggle the hidden class on its corresponding accordion_task_action.
+     - Update styling based on the visibility of the accordion_task_action (as described in the previous logic).
+
+   Styling Update:
+   - After toggling visibility, trigger the styling update function to ensure the background color and font weight are applied correctly.
+
+   Initial Styling on Page Load:
+   - Call the styling update function on page load to ensure proper styling based on the default visibility of each accordion item.
+
+2. Implementation Notes:
+   - Make sure each accordion_task has a unique identifier or index to associate it with its corresponding accordion_task_action.
+   - The hidden class is toggled on the accordion_task_action to control its visibility.
