@@ -190,7 +190,7 @@ document.addEventListener('DOMContentLoaded', function () {
     setTimeout(() => {
       bannerContainer.style.transform = 'scale(0)';
       bannerContainer.style.display = 'none';
-    }, 3000);
+    }, 1000);
   }
 
   // Ensure banner is visible on page reload
@@ -276,25 +276,33 @@ document.addEventListener('DOMContentLoaded', function () {
         // Check the current color of the SVG fill
         const isIconActive = icon.style.fill === 'rgb(0, 0, 0)';
 
-        // Toggle SVG fill color
-        icon.style.fill = isIconActive ? '' : '#000';
+        // Toggle spin animation class after a delay
+        icon.classList.toggle('spin-animation', !isIconActive);
+      
+        // Delay for 3 seconds
+        setTimeout(() => {
 
-        // Update completion counter and progress bar
-        if (!isIconActive) {
-          incrementCompletedStages();
-        } else {
-          // Handle case when an icon is unclicked (optional)
-          // Reset completion counter and progress bar
-          resetCompletedStages();
-        }
+          // Toggle SVG fill color
+          icon.style.fill = isIconActive ? '' : '#000';
 
-        // Update the progress bar and completion counter
-        updateProgressBar();
+          icon.classList.remove('spin-animation');
+          // Update completion counter and progress bar
+          if (!isIconActive) {
+            incrementCompletedStages();
+          } else {
+            // Handle case when an icon is unclicked (optional)
+            // Reset completion counter and progress bar
+            resetCompletedStages();
+          }
 
-        // Toggle background color and font-weight for both containers
-        toggleAccordionAction(accordionContainer);
-        toggleAccordionAction(nextAccordionContainer);
-      });
+          // Update the progress bar and completion counter
+          updateProgressBar();
+
+          // Toggle background color and font-weight for both containers
+          toggleAccordionAction(accordionContainer);
+          toggleAccordionAction(nextAccordionContainer);
+        }, 1000);
+      })
     });
   };
 

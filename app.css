@@ -596,6 +596,16 @@ input::-webkit-search-cancel-button {
     gap: 16px;
   }
 
+  /* Add the spin animation class */
+  .accordion_icon.spin-animation {
+    animation: spin 1s linear infinite;
+  }
+
+  /* Define the spin animation */
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
 
 
 
