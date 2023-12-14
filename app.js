@@ -190,7 +190,7 @@ document.addEventListener('DOMContentLoaded', function () {
     setTimeout(() => {
       bannerContainer.style.transform = 'scale(0)';
       bannerContainer.style.display = 'none';
-    }, 1000);
+    }, 500);
   }
 
   // Ensure banner is visible on page reload
@@ -198,6 +198,10 @@ document.addEventListener('DOMContentLoaded', function () {
     bannerContainer.style.transform = 'scale(1)';
     bannerContainer.style.display = 'block';
   };
+
+  // Attach click event to closeContainer
+  closeContainer.addEventListener('click', hideBanner);
+
 
   const progressBar = document.querySelector('.progress-bar');
   const completionCounter = document.querySelector('.completion-counter');
